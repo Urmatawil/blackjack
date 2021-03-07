@@ -15,13 +15,13 @@
 			<div class="menu">
 				<h1>Blackjack</h1>
 				<div class="botones">
-					<button>
+					<button id="nuevaPartida">
 						Nueva Partida
 					</button>
-					<button>
+					<button id="nuevaCarta">
 						Pedir Carta
 					</button>
-					<button>
+					<button id="finalizar">
 						Detener
 					</button>
 				</div>
@@ -31,25 +31,21 @@
 			<div class="table">
 				<div class="player">
 					<section>
-						<span>Jugador 1 </span> <small>victorias - 0</small>
+						<p>Jugador 1 - <span id="puntos-jugador"> Puntos : 0 </span></p>
+						<small>victorias - 0</small>
 					</section>
 					<section>
-						<div class="cartas">
-							<img src="/assets/img/AS.png" alt="As" />
-							<img src="/assets/img/AS.png" alt="As" />
-							<img src="/assets/img/AS.png" alt="As" />
-						</div>
+						<div class="cartas-jug"></div>
 					</section>
 				</div>
 
 				<div class="player">
-					<section><span>Oponente</span> <small>victorias - 0</small></section>
 					<section>
-						<div class="cartas">
-							<img src="/assets/img/red_back.png" alt="As" />
-							<img src="/assets/img/red_back.png" alt="As" />
-							<img src="/assets/img/red_back.png" alt="As" />
-						</div>
+						<p>Oponente - <span id="puntos-oponente"> Puntos : 0 </span></p>
+						<small>victorias - 0</small>
+					</section>
+					<section>
+						<div class="cartas-Op"></div>
 					</section>
 				</div>
 			</div>
