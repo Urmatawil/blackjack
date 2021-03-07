@@ -19,8 +19,8 @@ const crearDeck = ()=> {
         }
     }
     //utilizamos _.shuffle() de la libreria underscore para mezclar los numeros
-    deck = _.shuffle(deck)
-    console.log(deck)
+    deck = _.shuffle(deck);
+    console.log(deck);
     return deck;
 }
 
@@ -29,5 +29,24 @@ crearDeck()
 /*-------Pedir Carta---------*/
 
 const pedirCarta = ()=>{
-    
+
+    let carta;
+
+    (!deck.length) ? console.log("no hay cartas") : carta = deck.pop();
+
+    return carta;
 }
+
+pedirCarta()
+
+/*------Obtener valor Carta---*/
+
+const valorCarta = (carta) => {
+    let valor = carta.substring(0,carta.length-1);
+    return isNaN(valor) ? 
+        valor === "A" ? 11 :  10 : 
+        valor * 1;
+}
+
+const valor = valorCarta(pedirCarta());
+console.log(valor)
