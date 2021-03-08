@@ -60,7 +60,7 @@ cartaNueva.addEventListener("click", ()=>{
     console.log(deck)
     const carta = pedirCarta();
     puntuacionJug.innerText = `Puntos : ${puntosJug += valorCarta(carta)}`;
-    cartasJugador.innerHTML += `<img src="/assets/img/${carta}.png" alt="${carta}" />`;
+    cartasJugador.innerHTML += `<img src="/assets/img/${carta}.png" alt="${carta}" loading ="lazy" />`;
 
     puntosJug >= 21 ? (cartaNueva.disabled = true, turnOponente(puntosJug)): console.log()
 })
@@ -68,7 +68,7 @@ cartaNueva.addEventListener("click", ()=>{
 turnOponente = () => {
     const cartaOp = pedirCarta();
     puntuacionOp.innerText = `Puntos : ${puntosOpo += valorCarta(cartaOp)}`;
-    cartasOp.innerHTML += `<img src="/assets/img/${cartaOp}.png" alt="${cartaOp}" />`;
+    cartasOp.innerHTML += `<img src="/assets/img/${cartaOp}.png" alt="${cartaOp}" loading ="lazy"/>`;
 
 }
 
